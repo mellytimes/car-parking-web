@@ -1,0 +1,195 @@
+/* General Body Styles */
+body {
+    font-family: 'Sarabun', sans-serif;
+    margin: 0;
+    background-color: #ffffff; /* White background */
+    color: #222222; /* Dark gray text */
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eeeeee; /* Replaced shadow with a border */
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+}
+
+nav a.active {
+    color: #000000; /* Changed from blue to black */
+    border-bottom: 3px solid #000000;
+}
+
+/* Main Parking Info Card */
+.parking-info-card {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #eeeeee; /* Replaced shadow with a border */
+    margin-bottom: 3rem;
+}
+
+.parking-info-card img {
+    width: 40%;
+    object-fit: cover;
+}
+
+.card-details {
+    padding: 2rem;
+}
+
+.card-details h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: #000000;
+}
+
+.card-details p {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+.more-info {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Available Parking Section */
+.available-parking h2 {
+    font-size: 1.8rem;
+    color: #000000;
+}
+
+.available-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.show-all-button {
+    background: none;
+    border: 2px solid #000000; /* Black outline button */
+    color: #000000;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Parking Spots Grid */
+.parking-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.parking-spot {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.parking-spot h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.location {
+    color: #777;
+    margin: 0.5rem 0;
+}
+
+.status {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.status.available {
+    background-color: #f0f0f0; /* Light gray instead of green */
+    color: #333333;
+}
+
+.book-button {
+    background-color: #000000; /* Black button */
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.book-button:hover {
+    background-color: #333333;
+}
+.camera-feed {
+    margin-top: 2rem;
+    text-align: center;
+}
+.camera-feed img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    border: 1px solid #eeeeee; /* Replaced shadow with a border */
+}
+ /* Style for the 'Unbook' button */
+.unbook-button {
+    background-color: #000000; /* Black button */
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.unbook-button:hover {
+    background-color: #424242;
+}
+        
+        /* Utility class to hide elements */
+.hidden {
+    display: none;
+}

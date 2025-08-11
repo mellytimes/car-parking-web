@@ -1,0 +1,127 @@
+/* home.css (Minimal Black & White Theme) */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #ffffff; /* White background */
+    color: #222222; /* Dark gray text for readability */
+}
+html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable; 
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #eeeeee; /* Thin border for separation */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #222222;
+    margin: 0 1rem;
+    font-weight: 500;
+}
+
+.nav-item.active, .nav-item:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.nav-button {
+    background-color: transparent;
+    color: #222222;
+    border: 1px solid #222222; /* Outline button style */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+.nav-button:hover {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: #ffffff;
+    color: #222222;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero-button {
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: 1px solid #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.hero-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+/* --- Features Section --- */
+.features {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.features h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 2rem;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.feature-item {
+    padding: 2rem;
+    border: 1px solid #eeeeee; /* Replaces shadow */
+    border-radius: 8px;
+    width: 250px;
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid #eeeeee; /* Replaces background color */
+    font-size: 0.9rem;
+}

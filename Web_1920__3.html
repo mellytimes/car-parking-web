@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="Web_1920__3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+        <div class="form-container" data-aos="fade-right" data-aos-duration="1000">
+            <h1>Log in</h1>
+            <p class="signup-link">
+                Don't have an account? <a href="Web_1920__1.html" id="signup-link">Sign up</a>
+            </p>
+
+            <div class="social-buttons">
+                <button id="google-login-btn" class="social-button google">
+                    <img src="images-removebg-preview.png" alt="Google icon">
+                    <span>Continue with Google</span>
+                </button>
+                <button id="facebook-login-btn" class="social-button facebook">
+                    <img src="aal.png" alt="Facebook icon">
+                    <span>Continue with Facebook</span>
+                </button>
+            </div>
+
+            <div class="separator">OR</div>
+            
+            <button id="login-btn" class="login-button">Log in with Email</button>
+        </div>
+
+        <div class="image-container">
+            <img src="logo.png" alt="Decorative illustration of a person working on a laptop.">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@auth0/auth0-spa-js@2.1/dist/auth0-spa-js.production.js"></script>
+    
+    <script src="auth.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

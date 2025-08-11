@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Reservation</title>
+    <link rel="stylesheet" href="Web_1920__5.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Styles for statuses and buttons -->
+</head>
+<body>
+
+    <header data-aos="fade-down">
+        <div class="logo">Parking</div>
+        <nav>
+            <ul>
+                <li><a href="Web_1920__5.html" class="active">จองที่จอด</a></li>
+                <li><a href="Web_1920__7.html">หน้าหลัก</a></li>
+                <li><a href="Credit_card.html">เติมเงิน</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <section class="camera-feed" data-aos="zoom-in">
+        <h2>Live Camera Feed</h2>
+        <img src="http://127.0.0.1:5001/video_feed" alt="Camera Feed">
+    </section>
+
+        <section class="available-parking">
+            <div class="available-header" data-aos="fade-right">
+                <h2>Available Parking</h2>
+                <button class="show-all-button">Show All</button>
+            </div>
+
+            <!-- Added an ID for easier JavaScript selection -->
+            <div class="parking-grid" id="parkingGrid">
+                <div class="parking-spot" data-aos="fade-up">
+                    <h3>DCC-1</h3>
+                    <p class="location">Location: Zone A</p>
+                    <span class="status available">Available</span>
+                    <button class="action-button book-button">Book</button>
+                </div>
+                <div class="parking-spot" data-aos="fade-up" data-aos-delay="100">
+                    <h3>DCC-2</h3>
+                    <p class="location">Location: Zone A</p>
+                    <span class="status available">Available</span>
+                    <button class="action-button book-button">Book</button>
+                </div>
+                <div class="parking-spot" data-aos="fade-up" data-aos-delay="200">
+                    <h3>DDC-3</h3>
+                    <p class="location">Location: Zone B</p>
+                    <span class="status available">Available</span>
+                    <button class="action-button book-button">Book</button>
+                </div>
+                <div class="parking-spot" data-aos="fade-up" data-aos-delay="300">
+                    <h3>DDC-4</h3>
+                    <p class="location">Location: Zone B</p>
+                    <span class="status available">Available</span>
+                    <button class="action-button book-button">Book</button>
+                </div>
+                <div class="parking-spot" data-aos="fade-up" data-aos-delay="400">
+                    <h3>DDC-5</h3>
+                    <p class="location">Location: Zone C</p>
+                    <span class="status available">Available</span>
+                    <button class="action-button book-button">Book</button>
+                </div>
+                <div class="parking-spot" data-aos="fade-up" data-aos-delay="500">
+                    <h3>DDC-6</h3>
+                    <p class="location">Location: Zone C</p>
+                    <span class="status available">Available</span>
+                    <button class="action-button book-button">Book</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript to handle all interactive logic -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Initialize AOS Library ---
+            AOS.init({
+                duration: 800, // values from 0 to 3000, with step 50ms
+                once: true, // whether animation should happen only once - while scrolling down
+            });
+
+            // --- Element Selections ---
+            const parkingGrid = document.getElementById('parkingGrid');
+            const showAllButton = document.querySelector('.show-all-button');
+            const allParkingSpots = Array.from(document.querySelectorAll('.parking-spot'));
+
+            // --- Initial State Setup ---
+            // Hide all parking spots after the first 3
+            allParkingSpots.slice(3).forEach(spot => spot.classList.add('hidden'));
+
+            // --- Event Listener for Booking/Unbooking ---
+            parkingGrid.addEventListener('click', function(event) {
+                const clickedElement = event.target;
+
+                // Check if an action button was clicked
+                if (clickedElement.classList.contains('action-button')) {
+                    const parkingSpot = clickedElement.closest('.parking-spot');
+                    const statusElement = parkingSpot.querySelector('.status');
+                    
+                    // Toggle between Booked and Available
+                    const isBooked = clickedElement.classList.contains('unbook-button');
+
+                    if (isBooked) {
+                        // --- UNBOOK ---
+                        statusElement.textContent = 'Available';
+                        statusElement.classList.remove('booked');
+                        statusElement.classList.add('available');
+                        
+                        clickedElement.textContent = 'Book';
+                        clickedElement.classList.remove('unbook-button');
+                        clickedElement.classList.add('book-button');
+                    } else {
+                        // --- BOOK ---
+                        statusElement.textContent = 'Booked';
+                        statusElement.classList.remove('available');
+                        statusElement.classList.add('booked');
+
+                        clickedElement.textContent = 'Unbook';
+                        clickedElement.classList.remove('book-button');
+                        clickedElement.classList.add('unbook-button');
+                    }
+                }
+            });
+
+            // --- Event Listener for "Show All" / "Show Less" Button ---
+            showAllButton.addEventListener('click', function() {
+                const isShowingAll = this.textContent === 'Show Less';
+
+                if (isShowingAll) {
+                    // Action: HIDE extra spots
+                    allParkingSpots.slice(3).forEach(spot => spot.classList.add('hidden'));
+                    this.textContent = 'Show All';
+                } else {
+                    // Action: SHOW all spots
+                    allParkingSpots.forEach(spot => spot.classList.remove('hidden'));
+                    this.textContent = 'Show Less';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

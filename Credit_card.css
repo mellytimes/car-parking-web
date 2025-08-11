@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+    background: #111;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  main.card {
+    max-width: 640px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 8px;
+  }
+  .lead {
+    font-size: 14px;
+    color: #ccc;
+  }
+  .logos {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  .logo svg {
+    width: 40px;
+    height: auto;
+  }
+  label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+  }
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid white;
+    background: black;
+    color: white;
+    border-radius: 4px;
+  }
+  .row {
+    display: flex;
+    gap: 10px;
+  }
+  .actions {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+  }
+  button {
+    padding: 8px 12px;
+    border: 1px solid white;
+    background: black;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button.ghost {
+    background: transparent;
+  }
+  .small {
+    font-size: 12px;
+  }
+  .note {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 10px;
+  }
+  .card-preview {
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  .card-line {
+    display: flex;
+    justify-content: space-between;
+  }
+  .qr-modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .qr-modal .box {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 200px;
+  }
+  .qr {
+    width: 150px;
+    height: 150px;
+    background: #ccc;
+    margin: 10px auto;
+  }
