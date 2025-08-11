@@ -5,7 +5,7 @@ const configureClient = async () => {
     domain: "dev-6iyz7zfcbxikkoik.us.auth0.com",
     clientId: "xxzaucZxtqwdwv6ZcNjEhAKTUSdZpXej",
     authorizationParams: {
-      redirect_uri: 'http://127.0.0.1:5500'
+      redirect_uri: 'Web_1920__7.html',
     }
   });
 };
