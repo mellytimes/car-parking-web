@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/Web_1920__1.html"
+      }
+    ]
+  }
