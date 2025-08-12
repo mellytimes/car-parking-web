@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parking Reservation</title>
-    <link rel="stylesheet" href="Web_1920__5.css">
+    <link rel="stylesheet" href="/assets/styles/Web_1920__5.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Styles for statuses and buttons -->
 </head>
 <body>
 
@@ -17,9 +16,9 @@
         <div class="logo">Parking</div>
         <nav>
             <ul>
-                <li><a href="Web_1920__5.html" class="active">จองที่จอด</a></li>
-                <li><a href="Web_1920__7.html">หน้าหลัก</a></li>
-                <li><a href="Credit_card.html">เติมเงิน</a></li>
+                <li><a href="/assets/templates/Web_1920__5.html" class="active">จองที่จอด</a></li>
+                <li><a href="/assets/templates/Web_1920__7.html">หน้าหลัก</a></li>
+                <li><a href="/assets/templates/Credit_card.html">เติมเงิน</a></li>
             </ul>
         </nav>
     </header>
@@ -36,7 +35,6 @@
                 <button class="show-all-button">Show All</button>
             </div>
 
-            <!-- Added an ID for easier JavaScript selection -->
             <div class="parking-grid" id="parkingGrid">
                 <div class="parking-spot" data-aos="fade-up">
                     <h3>DCC-1</h3>
@@ -78,14 +76,13 @@
         </section>
     </main>
 
-    <!-- JavaScript to handle all interactive logic -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script async src="https://docs.opencv.org/4.9.0/opencv.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // --- Initialize AOS Library ---
             AOS.init({
-                duration: 800, // values from 0 to 3000, with step 50ms
-                once: true, // whether animation should happen only once - while scrolling down
+                duration: 800,
+                once: true,
             });
 
             // --- Element Selections ---

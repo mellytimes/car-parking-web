@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minimal Payment Page</title>
-  <link rel="stylesheet" href="Credit_card.css">
+  <link rel="stylesheet" href="/assets/styles/Credit_card.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -22,24 +22,24 @@
 
     <div class="logos" data-aos="zoom-in" data-aos-delay="400">
       <span id="card-type"></span>
-      <img src="Visa_Logo.png" alt="Visa" height="24" width="72">
-      <img src="pngegg.png" alt="Mastercard" height="24" width="72">
+      <img src="/assets/images/Visa_Logo.png" alt="Visa" height="24" width="72">
+      <img src="/assets/images/pngegg.png" alt="Mastercard" height="24" width="72">
     </div>
 
-    <label>Card holder</label>
+    <label for="holder">Card holder</label>
     <input id="holder" type="text" placeholder="Full name" data-aos="fade-right" data-aos-delay="600">
-
-    <label>Card number</label>
+    
+    <label for="card">Card number</label>
     <input id="card" type="text" placeholder="4242 4242 4242 4242" data-aos="fade-right" data-aos-delay="700">
-
+    
     <div class="row" data-aos="fade-left" data-aos-delay="800">
       <div>
-        <label>Expiry</label>
+        <label for="exp">Expiry</label>
         <input id="exp" type="text" placeholder="MM/YY">
       </div>
       <div>
-        <label>CVC</label>
-        <input type="text" placeholder="123">
+        <label for="cvc">CVC</label>
+        <input id="cvc" type="text" placeholder="123">
       </div>
     </div>
 
@@ -75,6 +75,6 @@
   <script>
     AOS.init();
   </script>
-  <script src="Credit_card.js"></script>
+  <script src="../scripts/Credit_card.js"></script>
 </body>
 </html>

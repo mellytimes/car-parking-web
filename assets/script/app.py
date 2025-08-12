@@ -10,7 +10,7 @@ from flask_cors import CORS  # <-- Added
 
 app = Flask(__name__)
 CORS(app) 
-
+stream_url = 'rtsp://user:password@123.45.67.89/stream'
 # --- Configuration ---
 BROKER_ADDRESS = "mqtt-ajoy.ddns.net"
 BROKER_PORT = 1883
@@ -69,9 +69,9 @@ def generate_frames():
         print(f"Error loading cascade: {car_cascade_path}")
         return
 
-    cap = cv2.VideoCapture(CAMERA_INDEX)
+    cap = cv2.VideoCapture(stream_url)  # Use stream URL for RTSP
     if not cap.isOpened():
-        print(f"Error: Could not open camera index {CAMERA_INDEX}")
+        print(f"Error: Could not open camera index {stream_url}")
         return
 
     client = setup_mqtt_client()
