@@ -2,7 +2,7 @@
     "rewrites": [
       {
         "source": "/",
-        "destination": "assets/templates/Web_1920__7.html"
+        "destination": "Web_1920__7.html"
       }
     ]
   }
