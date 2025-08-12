@@ -69,9 +69,9 @@ def generate_frames():
         print(f"Error loading cascade: {car_cascade_path}")
         return
 
-    cap = cv2.VideoCapture(stream_url)  # Use stream URL for RTSP
+    cap = cv2.VideoCapture(CAMERA_INDEX)  # Use stream URL for RTSP
     if not cap.isOpened():
-        print(f"Error: Could not open camera index {stream_url}")
+        print(f"Error: Could not open camera index {CAMERA_INDEX}")
         return
 
     client = setup_mqtt_client()
@@ -115,6 +115,7 @@ def generate_frames():
 def video_feed():
     return Response(generate_frames(),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
+
 
 if __name__ == "__main__":
     print("--- Starting MQTT Car Detection Web Server ---")

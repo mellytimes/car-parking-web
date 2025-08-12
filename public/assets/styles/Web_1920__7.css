@@ -14,12 +14,13 @@ html {
 /* --- Navigation Bar --- */
 .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Space between logo and nav items */
+    align-items: center; /* Align items vertically */
     background-color: #ffffff;
     padding: 1rem 2rem;
     border-bottom: 1px solid #eeeeee; /* Thin border for separation */
 }
+
 
 .logo {
     font-size: 1.5rem;
@@ -124,4 +125,18 @@ html {
     padding: 1.5rem;
     border-top: 1px solid #eeeeee; /* Replaces background color */
     font-size: 0.9rem;
+}
+
+.coin-indicator {
+    display: inline;
+    align-items: center; /* Align icon and text vertically */
+    margin-left: 1rem; /* Black outline *//* Adjust spacing */
+    font-size: 16px;
+    color: #000000;
+}
+
+.coin-icon {
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
 }
